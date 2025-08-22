@@ -50,4 +50,7 @@ O sistema segue uma arquitetura em **camadas**, separando responsabilidades de f
   - Inclui o arquivo SQL para criação e inicialização das tabelas do banco de dados.  
 
 - **Testes (`test/`)**  
-  - Contém testes automatizados utilizando JUnit (em expansão).  
+  - Contém testes automatizados utilizando JUnit (em expansão).
+
+ ## Imagens dos diagramas
+
