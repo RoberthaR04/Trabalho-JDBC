@@ -52,5 +52,11 @@ O sistema segue uma arquitetura em **camadas**, separando responsabilidades de f
 - **Testes (`test/`)**  
   - Contém testes automatizados utilizando JUnit (em expansão).
 
- ## Imagens dos diagramas
+## 📊 Diagrama UML
+
+![Diagrama UML](diagrama_de_classe.jpg)
+
+## 🗄️ Modelo ER
+
+![Modelo Entidade-Relacionamento](diagrama_MER.jpg)
 
