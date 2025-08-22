@@ -1,56 +1,71 @@
-# 🏠 Sistema de Aluguel de Imóveis
+🏠 Sistema de Aluguel de Imóveis
 
-Projeto acadêmico desenvolvido em **Java** utilizando **JDBC** e **Maven** para gerenciamento de uma imobiliária.  
-O sistema permite o cadastro e consulta de imóveis, clientes e contratos de aluguel, além da geração de relatórios básicos.
+Projeto acadêmico desenvolvido em Java com JDBC e Maven, voltado para o gerenciamento de uma imobiliária.
+O sistema possibilita o cadastro, consulta e gerenciamento de imóveis, clientes e contratos de aluguel, além da geração de relatórios simples para apoio às operações.
 
----
+📌 Funcionalidades
+🔹 Cadastro
 
-## 📌 Funcionalidades
+Imóveis com suas características
 
-- ✅ Cadastrar imóveis com suas características  
-- ✅ Cadastrar clientes  
-- ✅ Cadastrar contratos de aluguel (valor, data de início, fim, etc.)  
-- ✅ Listar imóveis disponíveis para aluguel  
-- ✅ Listar clientes cadastrados  
-- ✅ Listar contratos ativos  
+Clientes
 
----
+Contratos de aluguel (valor, data de início, data de término, etc.)
 
-## ⚙️ Tecnologias Utilizadas
+🔹 Consultas
 
-- **Java 17+**  
-- **Maven** 
-- **JDBC**
-- **MySQL** 
-- **IntelliJ IDEA** como IDE  
+Listar imóveis disponíveis para aluguel
 
----
+Listar clientes cadastrados
 
+Listar contratos ativos
 
-## 🏗️ Arquitetura
+⚙️ Tecnologias Utilizadas
 
-O projeto segue uma estrutura em **camadas**:
+Java 17+
 
-- **Main (`main/Main.java`)**
-  - Ponto de entrada da aplicação.
-  - Exibe menu interativo no console.
-  - Chama os métodos da camada DAO para realizar operações.
+Maven
 
-- **Modelos (`imobiliaria/`)**
-  - Contém as entidades principais: `Cliente`, `Imovel` e `Contrato`.
-  - Representam as tabelas do banco de dados.
+JDBC
 
-- **DAO (`daoimobiliaria/`)**
-  - Contém classes que fazem a comunicação com o banco via JDBC.
-  - Ex.: `ClienteDAO` → salvar, buscar e listar clientes.
+MySQL
 
-- **Conexão (`conexaoimobiliaria/`)**
-  - Contém a classe responsável por abrir/fechar conexão com o banco de dados (`ConexaoImobiliaria`).
+IntelliJ IDEA (IDE utilizada no desenvolvimento)
 
-- **Scripts (`scripts/`)**
-  - Arquivo SQL para criar tabelas e popular dados iniciais.
+🏗️ Arquitetura do Projeto
 
-- **Testes (`test/`)**
-  - Contém classes de teste com JUnit (pode ser expandido conforme o projeto evolui).
+O sistema segue uma arquitetura em camadas, separando responsabilidades de forma organizada:
 
----    
+Main (main/Main.java)
+
+Classe principal da aplicação
+
+Exibe o menu interativo no console
+
+Encaminha as requisições para a camada DAO
+
+Modelos (imobiliaria/)
+
+Entidades principais: Cliente, Imovel e Contrato
+
+Representam as tabelas do banco de dados
+
+DAO (daoimobiliaria/)
+
+Comunicação com o banco de dados via JDBC
+
+Exemplo: ClienteDAO implementa operações de cadastro, busca e listagem
+
+Conexão (conexaoimobiliaria/)
+
+Classe ConexaoImobiliaria
+
+Abre e encerra conexões com o banco
+
+Scripts (scripts/)
+
+Arquivo SQL para criação e inicialização das tabelas do banco
+
+Testes (test/)
+
+Testes automatizados com JUnit (em expansão)
