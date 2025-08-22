@@ -26,12 +26,31 @@ O sistema permite o cadastro e consulta de imóveis, clientes e contratos de alu
 
 ---
 
-## 📂 Estrutura do Projeto
 
-```bash
-Imobiliária_Banco/
-│-- fonte/          
-│-- alvo/           
-│-- pom.xml          
-│-- .gitignore       
-│-- README.md      
+## 🏗️ Arquitetura
+
+O projeto segue uma estrutura em **camadas**:
+
+- **Main (`main/Main.java`)**
+  - Ponto de entrada da aplicação.
+  - Exibe menu interativo no console.
+  - Chama os métodos da camada DAO para realizar operações.
+
+- **Modelos (`imobiliaria/`)**
+  - Contém as entidades principais: `Cliente`, `Imovel` e `Contrato`.
+  - Representam as tabelas do banco de dados.
+
+- **DAO (`daoimobiliaria/`)**
+  - Contém classes que fazem a comunicação com o banco via JDBC.
+  - Ex.: `ClienteDAO` → salvar, buscar e listar clientes.
+
+- **Conexão (`conexaoimobiliaria/`)**
+  - Contém a classe responsável por abrir/fechar conexão com o banco de dados (`ConexaoImobiliaria`).
+
+- **Scripts (`scripts/`)**
+  - Arquivo SQL para criar tabelas e popular dados iniciais.
+
+- **Testes (`test/`)**
+  - Contém classes de teste com JUnit (pode ser expandido conforme o projeto evolui).
+
+---    
